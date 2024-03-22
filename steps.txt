@@ -1,0 +1,7 @@
+TERRAFORM
+
+0. installed terraform on host
+01. create project on gcp and enable billing acount for it
+1. gcp account service with Storage Admin i BigQuery Admin Compute Admin
+2. generate service account key
+3. terraform init
