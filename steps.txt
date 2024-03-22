@@ -4,4 +4,6 @@ TERRAFORM
 01. create project on gcp and enable billing acount for it
 1. gcp account service with Storage Admin i BigQuery Admin Compute Admin
 2. generate service account key
-3. terraform init
+3. set variables in vvariables.tf
+4. terraform init
+5. terraform apply

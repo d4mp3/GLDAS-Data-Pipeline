@@ -7,19 +7,16 @@ terraform {
   }
 }
 
-
 provider "google" {
-  credentials = "./.keys/creds.json"
-  project     = "gldas-417901" // fill this with appropriate project id
-  region      = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
 }
 
-
-resource "google_storage_bucket" "gldas-bucket" {
-  name          = "gldas-417901-terra-bucket"
-  location      = "US"
+resource "google_storage_bucket" "de-zoomcamp-bucket" {
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
-
 
   lifecycle_rule {
     condition {
@@ -29,4 +26,9 @@ resource "google_storage_bucket" "gldas-bucket" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id = var.bq_dataset_name
+  location   = var.location
 }
