@@ -6,4 +6,8 @@ TERRAFORM
 2. generate service account key
 3. set variables in vvariables.tf
 4. terraform init
-5. terraform apply
+5. terraform apply /terraform destroy
+6. mage to gcs / scheduled /
+7. gcs to big BigQuery
+8  modeling
+
