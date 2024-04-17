@@ -26,7 +26,7 @@ def get_time_series(start_date: str, end_date: str, latitude: float, longitude: 
         end_date (str): End date for the time series in the format "YYYY-MM-DDTHH".
         latitude (float): Latitude coordinate for the location.
         longitude (float): Longitude coordinate for the location.
-        variable (str): Variable for which the time series is requested.
+        variable (str): Variable for which the time series is requested. For example precipitation (prcp)
 
     Returns:
         str: Time series data in string format.

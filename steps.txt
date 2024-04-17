@@ -1,13 +1,16 @@
 TERRAFORM
 
-0. installed terraform on host
-01. create project on gcp and enable billing acount for it
-1. gcp account service with Storage Admin i BigQuery Admin Compute Admin
-2. generate service account key
-3. set variables in vvariables.tf
-4. terraform init
-5. terraform apply /terraform destroy
-6. mage to gcs / scheduled /
-7. gcs to big BigQuery
-8  modeling
+1. installed terraform on host
+2. create project on gcp and enable billing acount for it
+3. gcp account service with Storage Admin i BigQuery Admin Compute Admin
+4. generate service account key
+5. set variables in vvariables.tf
+6. set .env fot mage
+7. terraform init
+8. terraform apply /terraform destroy
+9. set GOOGLE_SERVICE_ACC_KEY_FILEPATH:  in mage io_config and GOOGLE_LOCATION
+10. set project and object key in data exporter (mage)
+11. mage to gcs / scheduled /
+12. gcs to big BigQuery
+13. modeling
 

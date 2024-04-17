@@ -5,7 +5,7 @@ variable "credentials" {
 
 variable "project" {
   description = "Project"
-  default     = "gldas-417901"
+  default     = "damdezoomcamp"
 }
 
 variable "region" {
@@ -25,7 +25,7 @@ variable "bq_dataset_name" {
 
 variable "gcs_bucket_name" {
   description = "My Storage Bucket Name"
-  default     = "gldas-417901-terra-bucket"
+  default     = "damdezoomcamp-terra-bucket"
 }
 
 variable "gcs_storage_class" {
