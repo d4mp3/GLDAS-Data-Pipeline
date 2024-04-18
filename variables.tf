@@ -10,12 +10,12 @@ variable "project" {
 
 variable "region" {
   description = "Region"
-  default     = "europe-north1"
+  default     = "us-west1-a"
 }
 
 variable "location" {
   description = "Project Location"
-  default     = "EU"
+  default     = "US"
 }
 
 variable "bq_dataset_name" {
