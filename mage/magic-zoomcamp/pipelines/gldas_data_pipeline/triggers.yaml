@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-18 11:55:51.825565+00:00
+  name: gldas_pipeline_daily
+  pipeline_uuid: gldas_data_pipeline
+  schedule_interval: 0 4 * * *
+  schedule_type: time
+  settings: {}
+  sla: null
+  start_time: 2024-04-18 04:00:00
+  status: active
+  variables: {}

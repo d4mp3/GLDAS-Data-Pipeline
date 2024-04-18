@@ -1,0 +1,12 @@
+triggers:
+- envs: []
+  last_enabled_at: 2024-04-18 11:55:51.825565+00:00
+  name: daily_transform_schedule
+  pipeline_uuid: transform_staged_gldas_to_daily
+  schedule_interval: 0 6 * * *
+  schedule_type: time
+  settings: {}
+  sla: null
+  start_time: 2024-04-18 06:00:00
+  status: active
+  variables: {}
