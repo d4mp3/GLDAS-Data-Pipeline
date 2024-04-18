@@ -1,0 +1,31 @@
+[
+    {
+      "name": "date",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "Opis",
+      "fields": []
+    },
+    {
+      "name": "prcp",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "Opis",
+      "fields": []
+    },
+    {
+      "name": "year",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Opis",
+      "fields": []
+    },
+    {
+      "name": "month",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Opis",
+      "fields": []
+    }
+  ]
+  

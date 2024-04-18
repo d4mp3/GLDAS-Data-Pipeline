@@ -1,3 +1,4 @@
 {"operation": "create", "resource": {"type": "pipeline", "uuid": "gldas_gcs_to_bigquery"}, "timestamp": 1713433434, "user": null}
 {"operation": "create", "resource": {"type": "pipeline", "uuid": "transform_staged_gldas"}, "timestamp": 1713433561, "user": null}
 {"operation": "create", "resource": {"type": "pipeline", "uuid": "transform_staged_gldas_to_monthly"}, "timestamp": 1713438267, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "partitioning_clustering"}, "timestamp": 1713444168, "user": null}

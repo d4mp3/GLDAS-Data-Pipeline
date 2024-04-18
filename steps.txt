@@ -10,8 +10,12 @@ TERRAFORM
 8. terraform apply /terraform destroy
 9. put creds file in mage dir
 10. set GOOGLE_SERVICE_ACC_KEY_FILEPATH:  in mage io_config and GOOGLE_LOCATION
-11. set project and object key in data exporter (mage)
+11. set project and object key in sql data exporter (mage)
 12. mage to gcs / scheduled /
 13. gcs to big BigQuery
-14. modeling
+14. auth gcloud cli
+15. chmod +x script_name.sh
+15a. ./partitioning_and_clustering.sh
+16. use sccipt for partitioning and clustering data - change project name
+17. modeling
 
