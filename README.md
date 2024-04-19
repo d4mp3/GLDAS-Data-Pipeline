@@ -47,12 +47,12 @@ This project relies on the following Python libraries and their dependencies:
 2. Generate **service account key** and put it in your host.
 3. Set variables for your gcp project in **variables.tf** file
 
-After these steps initialize tf in folder of the repo:
+After completing these steps, initialize Terraform in the repository folder:
 ```
 terraform init
 ```
 
-and then run
+Then run:
 ```
 terraform apply
 ```
@@ -61,43 +61,45 @@ All steps were performed according to [first module](https://github.com/DataTalk
  
  ### Workflow Orchestration
 
-Enter mage folder and paste into it your **creds.json** for gcp service account. Then run
+Navigate to the Mage folder and paste your **creds.json** for the GCP service account. Then run
 ```
 docker compose up -d
 ```
-You might set proper name or location for your key file in mage instance. You can use **io_config.yaml** file or use use **GOOGLE_APPLIACATION_CREDENTIALS** variable. 
-All these instructions you can find with great [Matt's Palmer tutorial](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/02-workflow-orchestration)
-
-After all go to **localhost:6789** in your browser and run pipelines (gldas_data_pipeline, transform_staged_gldas_to_daily, transform_staged_gldas_to_monthly)
+You may set the proper name or location for your key file in the Mage instance.
+Use **io_config.yaml** file or **GOOGLE_APPLIACATION_CREDENTIALS** variable. 
+For detailed instructions, refer to [Matts Palmer's tutorial](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/02-workflow-orchestration) in the course materials.
+ 
+Afterward, go to localhost:6789 in your browser and run the pipelines (gldas_data_pipeline, transform_staged_gldas_to_daily, transform_staged_gldas_to_monthly).
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/2057d057-c725-405d-9682-1ce477ae2586)
 
-You may run pipelines manually if there is an error.
-To run pipeline manually go to **Pipelines -> SpecificPipeline -> Edit pipeline** and run exporter block with all upstreams like in the picture below
+You may run pipelines manually if an error occurs. To do so, go to **Pipelines -> SpecificPipeline -> Edit pipeline** and run the exporter block with all upstreams, as shown in the picture below:
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/38b4a0bd-006b-4b9c-ad8a-35d53a475930)
 
  ### Partitioning and clustering
-Use content of **partitioning_and_clustering_bq.sql** in your big queery project.
-you should **rename the project name** to the one you set in gcp and variables.tf
+Use the content of **partitioning_and_clustering_bq.sql** in your BigQueery project.
+Ensure to **rename the project name** to the one you set in gcp and variables.tf
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/b56c3832-8092-4a79-9fec-1da97f253cf7)
 
 
 ### Creating Dashboard
-To run metabase image execute 
+To run metabase image, execute: 
 ```
 docker run -d -p 3000:3000 --name metabase metabase/metabase
 ```
 
-Enter **localhost:3000** in browser and create account using your GCP creds file and make connection to BigQuery.
-After all you will get access to nice GUI where you can create dashboards.
+Enter **localhost:3000** in your browser and create an account using your GCP creds file. Then, make connection to BigQuery.
+After completing these steps, you'll gain access to a user-friendly GUI where you can create dashboards.
+
+You can create dashboards using questions or SQL queries. For detailed instructions, refer to the provided resources.
 
 Creating by question:
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/bdf3dc18-59ea-44fd-b341-c730f36b3f55)
 
-For creating of pie chart use sql query method included in **metabase_precipitation_days_query.sql**
+For creating of pie chart use SQL query method included in **metabase_precipitation_days_query.sql**
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/5559c9bb-8df5-4cba-acd0-c89dc7875875)
 
@@ -125,10 +127,9 @@ Dashboard includes 4 charts:
 
 ## Quick access to data by JupyterNotebook
 
-You can you JupyterNotebook if needed to use quick demo of pipeline.
-Follow these steps to creating env for Jupyter
+You can use the Jupyter Notebook for a quick demo of the pipeline. Follow these steps to set up the environment:
 
-create virtualenv for packages
+create a virtualenv for packages
 ```
 python3 -m venv .venv
 ```
@@ -148,7 +149,7 @@ run jupyter
 jupyter notebook
 ```
 
-enter notebook **How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb** via jupyter and follow the code.
+Navigate to the notebook How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb and follow the provided instructions in the code.
 
 [Notebook How_to_Access_the_Hydrology_Data_Rods_Time_Series_API](https://github.com/d4mp3/GLDAS-Data-Pipeline/blob/main/How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb)
 
