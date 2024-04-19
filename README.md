@@ -61,14 +61,14 @@ All steps were performed according to [first module](https://github.com/DataTalk
  
  ### Workflow Orchestration
 
-Enter mage folder and paste into it your creds.json for gcp service account. Then run
+Enter mage folder and paste into it your **creds.json** for gcp service account. Then run
 ```
 docker compose up -d
 ```
 You might set proper name or location for your key file in mage instance. You can use **io_config.yaml** file or use use **GOOGLE_APPLIACATION_CREDENTIALS** variable. 
 All these instructions you can find with great [Matt's Palmer tutorial](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/02-workflow-orchestration)
 
-After all go to localhost:6789 in your browser and run pipelines (gldas_data_pipeline, transform_staged_gldas_to_daily, transform_staged_gldas_to_monthly)
+After all go to **localhost:6789** in your browser and run pipelines (gldas_data_pipeline, transform_staged_gldas_to_daily, transform_staged_gldas_to_monthly)
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/2057d057-c725-405d-9682-1ce477ae2586)
 
@@ -79,7 +79,7 @@ To run pipeline manually go to **Pipelines -> SpecificPipeline -> Edit pipeline*
 
  ### Partitioning and clustering
 Use content of **partitioning_and_clustering_bq.sql** in your big queery project.
-you should rename the project name to the one you set in gcp and variables.tf
+you should **rename the project name** to the one you set in gcp and variables.tf
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/b56c3832-8092-4a79-9fec-1da97f253cf7)
 
@@ -90,7 +90,7 @@ To run metabase image execute
 docker run -d -p 3000:3000 --name metabase metabase/metabase
 ```
 
-Enter localhost:3000 in browser and create account using your GCP creds file and make connection to BigQuery.
+Enter **localhost:3000** in browser and create account using your GCP creds file and make connection to BigQuery.
 After all you will get access to nice GUI where you can create dashboards.
 
 Creating by question:
@@ -109,6 +109,50 @@ or if you want to start execute
 ```
 docker start metabase
 ```
+
+## Dashboard
+Dashboard showcasing Warsaw's precipitation data through four insightful charts.
+You can find dashboard in **gldas_prcp_warsaw.pdf** file. 
+
+Dashboard includes 4 charts:
+1. The daily partitioned clustered precipitation, summed by year.
+2. The daily partitioned clustered precipitation, summed by month for the year 2023.
+3. The daily partitioned clustered precipitation, averaged by year and auto-binned by month, for years 2013-2023.
+4. The number of days with precipitation specifically for the year 2023.
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/ce1ab3ad-05e1-4705-bb73-17317c4ef904)
+
+
+## Quick access to data by JupyterNotebook
+
+You can you JupyterNotebook if needed to use quick demo of pipeline.
+Follow these steps to creating env for Jupyter
+
+create virtualenv for packages
+```
+python3 -m venv .venv
+```
+
+activate venv
+```
+source .venv/bin/activate
+```
+
+install requirements
+```
+pip install -r requirements.txt
+```
+
+run jupyter
+```
+jupyter notebook
+```
+
+enter notebook **How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb** via jupyter and follow the code.
+
+[Notebook How_to_Access_the_Hydrology_Data_Rods_Time_Series_API](https://github.com/d4mp3/GLDAS-Data-Pipeline/blob/main/How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb)
+
+
 
 
 
