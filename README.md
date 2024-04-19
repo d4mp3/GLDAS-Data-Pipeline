@@ -150,7 +150,9 @@ jupyter notebook
 ```
 
 Navigate to the notebook How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb and follow the provided instructions in the code.
+Remember to set proper kernel in JupyterLab
 
+The notebook can be found in the link posted below.
 [Notebook How_to_Access_the_Hydrology_Data_Rods_Time_Series_API](https://github.com/d4mp3/GLDAS-Data-Pipeline/blob/main/How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb)
 
 
