@@ -6,6 +6,9 @@ Additionally, the project aims to create dashboard presenting precipitation data
 ## Project Overview
 The project involves orchestrating the execution of data pipelines to retrieve, process, and store precipitation data from the GLDAS API. These data pipelines will operate on daily and monthly cycles, ensuring the availability of up-to-date and aggregated data for analysis and visualization purposes. The ultimate goal is to store the processed data on the Google Cloud Platform for efficient storage, retrieval, and analysis, culminating in the creation of interactive dashboards.
 
+## Data Pipeline
+The data pipeline operates on a batch processing model, handling both daily and monthly frequencies seamlessly.
+
 ## Implementation Approach
 1. **Jupyter Notebook**: Include a Jupyter Notebook presenting a simpler version of data retrieval from the GLDAS API and visualization of the retrieved data using charts. This notebook serves as a demonstration of the data retrieval and visualization process for educational and exploratory purposes.
 2. **Data Retrieval**: Utilize the GLDAS API to fetch precipitation data specifically for the city of Warsaw.
@@ -56,4 +59,22 @@ terraform init
 
 All steps were performed according to [first module](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/01-docker-terraform/1_terraform_gcp) of the data engineering zoomcamp course. If you have any problems, you will find help there.
  
- 
+ ### Data Orchestration
+
+Enter mage folder and paste into it your creds.json for gcp service account. Then run
+```
+docker compose up -d
+```
+You might set proper name or location for your key file in mage instance. You can use **io_config.yaml** file or use use **GOOGLE_APPLIACATION_CREDENTIALS** variable. 
+All these instructions you can find with great [Matt's Palmer tutorial](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/02-workflow-orchestration)
+
+After all go to localhost:6789 in your browser and run pipelines (gldas_data_pipeline, transform_staged_gldas_to_daily, transform_staged_gldas_to_monthly)
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/2057d057-c725-405d-9682-1ce477ae2586)
+
+You may run pipelines manualy if there is an error.
+To run pipeline manualy go to **Pipelines -> SpecificPipeline -> Edit pipeline** and run exporter block with all upstreams like in the picture below
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/38b4a0bd-006b-4b9c-ad8a-35d53a475930)
+
+
