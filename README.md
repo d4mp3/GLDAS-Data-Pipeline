@@ -32,3 +32,28 @@ This project relies on the following Python libraries and their dependencies:
 - **numpy**: Essential for numerical computing tasks, employed for various data processing operations.
 - **datetime**: Python's built-in datetime module is utilized for date and time manipulation, particularly in organizing and analyzing temporal data.
 - **urllib**: Provides utility functions for working with URLs, used for encoding query parameters for API requests.
+
+## Reproducibility
+
+### Pre-Requisites
+1. Terraform client installation: https://www.terraform.io/downloads
+2. Cloud Provider account: https://console.cloud.google.com/
+
+### Infra
+1. Create google service account with following permissions: **Storage Admin, BigQuery Admin and Compute Admin**.
+2. Generate **service account key** and put it in your host.
+3. Set variables for your gcp project in **variables.tf** file
+
+After these steps initialize tf in folder of the repo:
+```
+terraform init
+```
+
+and then run
+```
+terraform init
+```
+
+All steps were performed according to [first module](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/01-docker-terraform/1_terraform_gcp) of the data engineering zoomcamp course. If you have any problems, you will find help there.
+ 
+ 
