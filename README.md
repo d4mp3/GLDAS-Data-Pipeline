@@ -54,12 +54,12 @@ terraform init
 
 and then run
 ```
-terraform init
+terraform apply
 ```
 
 All steps were performed according to [first module](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/01-docker-terraform/1_terraform_gcp) of the data engineering zoomcamp course. If you have any problems, you will find help there.
  
- ### Data Orchestration
+ ### Workflow Orchestration
 
 Enter mage folder and paste into it your creds.json for gcp service account. Then run
 ```
@@ -72,9 +72,43 @@ After all go to localhost:6789 in your browser and run pipelines (gldas_data_pip
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/2057d057-c725-405d-9682-1ce477ae2586)
 
-You may run pipelines manualy if there is an error.
-To run pipeline manualy go to **Pipelines -> SpecificPipeline -> Edit pipeline** and run exporter block with all upstreams like in the picture below
+You may run pipelines manually if there is an error.
+To run pipeline manually go to **Pipelines -> SpecificPipeline -> Edit pipeline** and run exporter block with all upstreams like in the picture below
 
 ![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/38b4a0bd-006b-4b9c-ad8a-35d53a475930)
+
+ ### Partitioning and clustering
+Use content of **partitioning_and_clustering_bq.sql** in your big queery project.
+you should rename the project name to the one you set in gcp and variables.tf
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/b56c3832-8092-4a79-9fec-1da97f253cf7)
+
+
+### Creating Dashboard
+To run metabase image execute 
+```
+docker run -d -p 3000:3000 --name metabase metabase/metabase
+```
+
+Enter localhost:3000 in browser and create account using your GCP creds file and make connection to BigQuery.
+After all you will get access to nice GUI where you can create dashboards.
+
+Creating by question:
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/bdf3dc18-59ea-44fd-b341-c730f36b3f55)
+
+For creating of pie chart use sql query method included in **metabase_precipitation_days_query.sql**
+
+![image](https://github.com/d4mp3/GLDAS-Data-Pipeline/assets/61472346/5559c9bb-8df5-4cba-acd0-c89dc7875875)
+
+To stop container use
+```
+docker stop metabase
+```
+or if you want to start execute
+```
+docker start metabase
+```
+
 
 
