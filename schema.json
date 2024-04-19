@@ -1,30 +1,30 @@
 [
     {
-      "name": "date",
+      "name": "datetime",
       "type": "DATETIME",
       "mode": "NULLABLE",
-      "description": "Opis",
+      "description": "Desc",
       "fields": []
     },
     {
       "name": "prcp",
       "type": "FLOAT",
       "mode": "NULLABLE",
-      "description": "Opis",
+      "description": "Desc",
       "fields": []
     },
     {
       "name": "year",
       "type": "INTEGER",
       "mode": "NULLABLE",
-      "description": "Opis",
+      "description": "Desc",
       "fields": []
     },
     {
       "name": "month",
       "type": "INTEGER",
       "mode": "NULLABLE",
-      "description": "Opis",
+      "description": "Desc",
       "fields": []
     }
   ]

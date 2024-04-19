@@ -28,13 +28,13 @@ blocks:
   language: python
   name: transform_staged_data_to_daily
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - load_gldas_gcs
   uuid: transform_staged_data_to_daily
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     data_provider: bigquery

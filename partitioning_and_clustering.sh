@@ -8,7 +8,7 @@ bq mk \
 # Create partitioned and clustered table
 bq mk \
 --time_partitioning_type=DAY \
---time_partitioning_field=date \
+--time_partitioning_field=datetime \
 --clustering_fields=month \
 --schema './schema.json' \
 --table damdezoomcamp:gldas_dataset.prcp_daily_partitioned_clustered

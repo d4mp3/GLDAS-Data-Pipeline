@@ -21,7 +21,6 @@ def transform(data, *args, **kwargs):
 
     daily_sum['year'] = daily_sum['year'].astype(int)
     daily_sum['month'] = daily_sum['month'].astype(int)
-    daily_sum = daily_sum.rename(columns={'datetime': 'date'})
 
     return daily_sum
 

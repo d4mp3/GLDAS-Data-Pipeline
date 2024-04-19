@@ -17,5 +17,10 @@ TERRAFORM
 15. chmod +x script_name.sh
 15a. ./partitioning_and_clustering.sh
 16. use sccipt for partitioning and clustering data - change project name
-17. modeling
+17. docker run -d -p 3000:3000 --name metabase metabase/metabase
+18 fill form with big query project id and chose your creds.josn
+19
+20
+21
+22
 

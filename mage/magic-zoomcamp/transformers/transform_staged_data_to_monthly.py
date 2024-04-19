@@ -12,7 +12,6 @@ def transform(data, *args, **kwargs):
     monthly_mean = (data.groupby(pd.Grouper(key='datetime', freq='1D')).sum() * 3 * 3600).resample("M").mean()
     monthly_mean = monthly_mean.reset_index()
     monthly_mean['datetime'] = monthly_mean['datetime'].dt.strftime('%Y-%m')
-    monthly_mean = monthly_mean.rename(columns={'datetime': 'date'})
 
     return monthly_mean
 
