@@ -156,7 +156,11 @@ The notebook can be found in the link posted below.
 
 [How_to_Access_the_Hydrology_Data_Rods_Time_Series_API](https://github.com/d4mp3/GLDAS-Data-Pipeline/blob/main/How_to_Access_the_Hydrology_Data_Rods_Time_Series_API.ipynb)
 
+## TODOs
 
+* Containerized environment with docker
+* Makefile
+* Implement CI/CD
 
 
 
